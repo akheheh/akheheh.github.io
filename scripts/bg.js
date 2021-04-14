@@ -1,11 +1,11 @@
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#ffffff");
+scene.background = new THREE.Color("#0a0a0a");
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 10);
 camera.position.z = 8;
 
-
+/*0x0a0a0a*/
 const torGeometry = new THREE.TorusKnotGeometry(20, 8, 256, 128);
-const torMaterial = new THREE.MeshBasicMaterial({ color: 0x0a0a0a, wireframe: true });
+const torMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
 const torKnot = new THREE.Mesh(torGeometry, torMaterial);
 scene.add(torKnot);
 

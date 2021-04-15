@@ -23,9 +23,11 @@ window.addEventListener('resize', () => {
 
 const animate = () => {
     requestAnimationFrame(animate);
-    torKnot.rotation.z += 0.0025;
-    torKnot.rotation.x += 0.0025;
-    torKnot.rotation.y += 0.0025;
+    vel = 0.002;
+    torKnot.rotation.set(torKnot.rotation.x + vel, torKnot.rotation.y + vel,torKnot.rotation.z + vel);
+    //torKnot.rotation.z += 0.0025;
+    //torKnot.rotation.x += 0.0025;
+    //torKnot.rotation.y += 0.0025;
     renderer.render(scene, camera);
 }
 animate();

@@ -1,0 +1,64 @@
+/*Vars*/
+$bodyBG: #ffffff;
+$bodyTextColor: #0a0a0a;
+
+/*Column Mixin*/
+@mixin column($textCol) {
+    display: inline-block;
+    width: 50vw;
+    text-align: left;
+    color: $textCol;
+}
+
+body {
+    background-color: $bodyBG;
+
+    .bg-container {
+        width: 100vw;
+        z-index: 1;
+        position: absolute;
+        opacity: 0.2;
+    }
+
+    .container {
+        z-index: 2;
+        position: relative;
+        margin: 8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .container-left {
+            @include column($bodyTextColor);
+            .hero-h1 {
+                font-size: calc(3.5rem + 4.5vw);
+                font-weight: 700;
+            }
+        }
+
+        .container-right {
+            line-height: 2;
+            @include column($bodyTextColor);
+
+            .hero-h2 {
+                font-size: calc(2.5rem + 2vw);
+                font-weight: 500;
+                margin-left: 3rem;
+            }
+
+            .disclaimer {
+                margin-left: 3rem;
+                font-weight: 300;
+                font-size: 1.7rem;   
+            }
+        }
+    }
+
+    /*Responsive Stuff*/
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+    
+}

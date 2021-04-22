@@ -1,0 +1,48 @@
+//Vars
+/*Colors*/
+$navBG: #0a0a0a;
+$navTextCol: #ffffff;
+$navTextHover: #ff5d9b;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 1rem;
+}
+
+body {
+    font-family: "proxima-nova", Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    .nav {
+        margin: 0;
+
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: left;
+            background-color: $navBG;
+
+            li {
+                margin: 2rem;
+
+                a {
+                    display: block;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    color: $navTextCol;
+                    transition: color 0.2s linear;
+
+                    &:hover {
+                        color: $navTextHover;
+                    }
+                }
+                
+            }
+        }
+    }
+}

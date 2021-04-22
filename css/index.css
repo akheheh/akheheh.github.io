@@ -1,33 +1,46 @@
+/*Vars*/
+/*Column Mixin*/
 body {
   background-color: #ffffff;
+  /*Responsive Stuff*/
 }
 
-.bg-container {
+body .bg-container {
   width: 100vw;
-
   z-index: 1;
   position: absolute;
   opacity: 0.2;
 }
 
-.container {
+body .container {
   z-index: 2;
   position: relative;
   margin: 8rem;
-
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.container-left {
+body .container .container-left {
   display: inline-block;
   width: 50vw;
   text-align: left;
   color: #0a0a0a;
 }
 
-.container-right {
+body .container .container-left .hero-h1 {
+  font-size: calc(3.5rem + 4.5vw);
+  font-weight: 700;
+}
+
+body .container .container-right {
   line-height: 2;
   display: inline-block;
   width: 50vw;
@@ -35,28 +48,24 @@ body {
   color: #0a0a0a;
 }
 
-.container .container-left .hero-h1 {
-  font-size: calc(3.5rem + 4.5vw);
-  font-weight: 700;
-}
-
-.container .container-right .hero-h2 {
+body .container .container-right .hero-h2 {
   font-size: calc(2.5rem + 2vw);
   font-weight: 500;
   margin-left: 3rem;
 }
 
-.container .container-right .disclaimer {
+body .container .container-right .disclaimer {
   margin-left: 3rem;
   font-weight: 300;
   font-size: 1.7rem;
 }
 
-/*Responsive Stuff*/
 @media (max-width: 800px) {
-  .container {
-    flex-direction: column;
+  body .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
-
-
+/*# sourceMappingURL=index.css.map */

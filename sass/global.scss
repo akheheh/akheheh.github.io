@@ -2,13 +2,13 @@
 /*Colors*/
 $navBG: #0a0a0a;
 $navTextCol: #ffffff;
-$navTextHover: #ff5d9b;
+$navTextHover: #39a6ff;
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-size: 1rem;
+    font-size: 100%;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
     .nav {
         margin: 0;
-
+        width: 100%;
         ul {
             padding: 0;
             list-style: none;

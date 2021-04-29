@@ -1,8 +1,6 @@
 /*Vars*/
-/*Column Mixin*/
 body {
   background-color: #ffffff;
-  /*Responsive Stuff*/
 }
 
 body .bg-container {
@@ -12,9 +10,9 @@ body .bg-container {
   opacity: 0.2;
 }
 
-body .container {
+body .row {
   z-index: 2;
-  position: relative;
+  opacity: 1.0;
   margin: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,46 +24,27 @@ body .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 100vw;
+  margin: 10rem auto;
 }
 
-body .container .container-left {
-  display: inline-block;
-  width: 50vw;
-  text-align: left;
-  color: #0a0a0a;
+body .row .col-1-of-2 {
+  width: calc((100% - 8rem)/2);
+  float: left;
 }
 
-body .container .container-left .hero-h1 {
-  font-size: calc(3.5rem + 4.5vw);
-  font-weight: 700;
+body .hero-h1 {
+  font-size: 10rem;
 }
 
-body .container .container-right {
-  line-height: 2;
-  display: inline-block;
-  width: 50vw;
-  text-align: left;
-  color: #0a0a0a;
-}
-
-body .container .container-right .hero-h2 {
-  font-size: calc(2.5rem + 2vw);
+body .hero-h2 {
+  font-size: 6rem;
+  margin-bottom: 5rem;
   font-weight: 500;
-  margin-left: 3rem;
 }
 
-body .container .container-right .disclaimer {
-  margin-left: 3rem;
-  font-weight: 300;
-  font-size: 1.7rem;
-}
-
-@media (max-width: 800px) {
-  body .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+body .disclaimer {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 /*# sourceMappingURL=index.css.map */

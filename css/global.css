@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  font-size: 1rem;
+  font-size: 100%;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 
 body .nav {
   margin: 0;
+  width: 100%;
 }
 
 body .nav ul {
@@ -45,6 +46,6 @@ body .nav ul li a {
 }
 
 body .nav ul li a:hover {
-  color: #ff5d9b;
+  color: #39a6ff;
 }
 /*# sourceMappingURL=global.css.map */

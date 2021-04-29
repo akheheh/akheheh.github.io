@@ -2,14 +2,6 @@
 $bodyBG: #ffffff;
 $bodyTextColor: #0a0a0a;
 
-/*Column Mixin*/
-@mixin column($textCol) {
-    display: inline-block;
-    width: 50vw;
-    text-align: left;
-    color: $textCol;
-}
-
 body {
     background-color: $bodyBG;
 
@@ -20,45 +12,38 @@ body {
         opacity: 0.2;
     }
 
-    .container {
+    .row {
         z-index: 2;
-        position: relative;
+        opacity: 1.0;
         margin: 8rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
-
-        .container-left {
-            @include column($bodyTextColor);
-            .hero-h1 {
-                font-size: calc(3.5rem + 4.5vw);
-                font-weight: 700;
-            }
-        }
-
-        .container-right {
-            line-height: 2;
-            @include column($bodyTextColor);
-
-            .hero-h2 {
-                font-size: calc(2.5rem + 2vw);
-                font-weight: 500;
-                margin-left: 3rem;
-            }
-
-            .disclaimer {
-                margin-left: 3rem;
-                font-weight: 300;
-                font-size: 1.7rem;   
+        max-width: 100vw;
+        margin: 10rem auto;
+        .col-1-of-2 {
+            //background-color: aqua;
+            width: calc((100% - 8rem)/2);
+            float: left;
+            
+            &:nth-of-type(2) {
+                //background-color: blue;
             }
         }
     }
 
-    /*Responsive Stuff*/
-@media (max-width: 800px) {
-    .container {
-      flex-direction: column;
+    .hero-h1 {
+        font-size: 10rem;
     }
-  }
+
+    .hero-h2 {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+        font-weight: 500;
+    }
     
+    .disclaimer {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
 }
